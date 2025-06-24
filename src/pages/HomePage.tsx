@@ -42,7 +42,7 @@ const HomePage = ({ sideBarVisible }: { sideBarVisible: boolean }) => {
 
     return (
         <div className="flex flex-row w-full">
-            <div className="h-dvh w-full px-4 mt-1">
+            <div className="min-h-[calc(100vh-64px)] w-full px-4 mt-1">
                 {/* Tab bar */}
                 <div
                     className={`flex flex-col justify-between transition-all duration-300 ${

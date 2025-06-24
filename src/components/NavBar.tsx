@@ -1,5 +1,6 @@
 import {
     Bars3Icon,
+    CheckBadgeIcon,
     MagnifyingGlassIcon,
     ShoppingCartIcon,
     UserCircleIcon,
@@ -7,12 +8,16 @@ import {
 import logoLee from "../assets/logo-lee.png";
 import { Link } from "react-router-dom";
 
+import type { User } from "firebase/auth";
+
 const NavBar = ({
     sideBarVisible,
     toggleSidebar,
+    firebaseUser,
 }: {
     sideBarVisible: boolean;
     toggleSidebar: () => void;
+    firebaseUser: User | null;
 }) => {
     return (
         <>
@@ -44,7 +49,13 @@ const NavBar = ({
                         <ShoppingCartIcon className="w-8 p-1 border-1 border-transparent text-white hover:cursor-pointer hover:border-1 hover:border-purple-700 active:border-purple-600 active:bg-purple-800 transition-colors duration-100" />
                     </div>
                     <div className="group">
-                        <UserCircleIcon className="w-9 p-1 border-1 border-transparent text-white hover:cursor-pointer hover:border-1 hover:border-purple-700 active:border-purple-600 active:bg-purple-800 transition-colors duration-100" />
+                        {firebaseUser ? (
+                            <CheckBadgeIcon className="w-9 p-1 border-1 border-transparent text-white hover:cursor-pointer hover:border-1 hover:border-purple-700 active:border-purple-600 active:bg-purple-800 transition-colors duration-100" />
+                        ) : (
+                            <Link to="/user">
+                                <UserCircleIcon className="w-9 p-1 border-1 border-transparent text-white hover:cursor-pointer hover:border-1 hover:border-purple-700 active:border-purple-600 active:bg-purple-800 transition-colors duration-100" />
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>
