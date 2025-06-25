@@ -1,4 +1,4 @@
-# React + TypeScript + Firebase + MangoDB ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+# React + TypeScript + Firebase + MangoDB ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow) Demo is half way done. Come check it out!
 
 This is a project for myself and showcasing my skills and understanding.
 
