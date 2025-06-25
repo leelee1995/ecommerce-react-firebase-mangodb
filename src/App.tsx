@@ -2,28 +2,19 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import UserPage from "./pages/UserPage";
 import NavBar from "./components/NavBar";
-import { useEffect, useState } from "react";
-import { getAuth, onAuthStateChanged, type User } from "firebase/auth";
-import { firebaseApp } from "./firebase";
+import { useState } from "react";
+import { AuthProvider } from "./AuthContext";
+import NotFoundPage from "./pages/NotFoundPage";
+import UserRegistryPage from "./pages/UserRegistryPage";
 
 function App() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [user, setUser] = useState<User | null>(null);
-
-    useEffect(() => {
-        const auth = getAuth(firebaseApp);
-        const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-            setUser(firebaseUser);
-        });
-        return () => unsubscribe();
-    }, []);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
 
     return (
-        <>
+        <AuthProvider>
             <NavBar
                 sideBarVisible={sidebarOpen}
                 toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
-                firebaseUser={user}
             />
             <Routes>
                 <Route
@@ -31,8 +22,10 @@ function App() {
                     element={<HomePage sideBarVisible={sidebarOpen} />}
                 />
                 <Route path="/user" element={<UserPage />} />
+                <Route path="/user_registry" element={<UserRegistryPage />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Routes>
-        </>
+        </AuthProvider>
     );
 }
 

@@ -42,7 +42,7 @@ const HomePage = ({ sideBarVisible }: { sideBarVisible: boolean }) => {
 
     return (
         <div className="flex flex-row w-full">
-            <div className="min-h-[calc(100vh-64px)] w-full px-4 mt-1">
+            <div className="min-h-[calc(100vh-70px)] w-full px-4 mt-1">
                 {/* Tab bar */}
                 <div
                     className={`flex flex-col justify-between transition-all duration-300 ${
@@ -70,82 +70,6 @@ const HomePage = ({ sideBarVisible }: { sideBarVisible: boolean }) => {
                     </div>
                     {/* Main content area */}
                     <div className="flex flex-wrap flex-row justify between gap-10">
-                        {/* Example card 1 */}
-                        <div className="flex flex-col w-60 rounded-md border-2 border-purple-300 hover:border-purple-500 hoverborder-3">
-                            <div className="bg-purple-200 w-full text-purple-300 rounded-t-md">
-                                <PhotoIcon className="w-auto" />
-                            </div>
-                            <div className="flex flex-col p-4">
-                                <h3 className="text-wrap font-bold w-full">
-                                    Z790 AORUS ELITE AX
-                                </h3>
-                                <div className="flex flex-row justify-start gap-1">
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                </div>
-                                <p className="text-sm pt-4">@Gigabyte</p>
-                            </div>
-                        </div>
-                        {/* Example card 1 */}
-                        <div className="flex flex-col w-60 rounded-md border-2 border-purple-300 hover:border-purple-500 hoverborder-3">
-                            <div className="bg-purple-200 w-full text-purple-300 rounded-t-md">
-                                <PhotoIcon className="w-auto" />
-                            </div>
-                            <div className="flex flex-col p-4">
-                                <h3 className="text-wrap font-bold w-full">
-                                    Z790 AORUS ELITE AX
-                                </h3>
-                                <div className="flex flex-row justify-start gap-1">
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                </div>
-                                <p className="text-sm pt-4">@Gigabyte</p>
-                            </div>
-                        </div>
-                        {/* Example card 1 */}
-                        <div className="flex flex-col w-60 rounded-md border-2 border-purple-300 hover:border-purple-500 hoverborder-3">
-                            <div className="bg-purple-200 w-full text-purple-300 rounded-t-md">
-                                <PhotoIcon className="w-auto" />
-                            </div>
-                            <div className="flex flex-col p-4">
-                                <h3 className="text-wrap font-bold w-full">
-                                    Z790 AORUS ELITE AX
-                                </h3>
-                                <div className="flex flex-row justify-start gap-1">
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                </div>
-                                <p className="text-sm pt-4">@Gigabyte</p>
-                            </div>
-                        </div>
-                        {/* Example card 1 */}
-                        <div className="flex flex-col w-60 rounded-md border-2 border-purple-300 hover:border-purple-500 hoverborder-3">
-                            <div className="bg-purple-200 w-full text-purple-300 rounded-t-md">
-                                <PhotoIcon className="w-auto" />
-                            </div>
-                            <div className="flex flex-col p-4">
-                                <h3 className="text-wrap font-bold w-full">
-                                    Z790 AORUS ELITE AX
-                                </h3>
-                                <div className="flex flex-row justify-start gap-1">
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                    <StarIcon className="w-4 h-4 text-yellow-500" />
-                                </div>
-                                <p className="text-sm pt-4">@Gigabyte</p>
-                            </div>
-                        </div>
                         {/* Example card 1 */}
                         <div className="flex flex-col w-60 rounded-md border-2 border-purple-300 hover:border-purple-500 hoverborder-3">
                             <div className="bg-purple-200 w-full text-purple-300 rounded-t-md">
